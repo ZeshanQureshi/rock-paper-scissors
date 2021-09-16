@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+button {
+  width: 125px;
+  height: 50px;
+  text-align: center;
+  border-style: solid;
+  border: 2px solid;
+  background-color: white;
+  cursor: pointer;
+}
