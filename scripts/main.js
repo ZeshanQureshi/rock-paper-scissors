@@ -1,35 +1,39 @@
 let gameWon = 0;
 
-let playerWins = 0;
 let computerWins = 0;
+let playerWins = 0;
 
 function computerPlay() {
     let computerChoices = ["ROCK", "PAPER", "SCISSORS"];
     return computerChoices[Math.floor(Math.random()*3)];
 }
 
-function playRound(computerMove, playerWins, computerWins) {
-    let playerMove = prompt("Move?");
-    playerMove = playerMove.toUpperCase;
-    let roundResults = " ";
+function playRound() {
+    let computerMove = computerPlay();
+    let playerInput = window.prompt("Move?");
+
+    let playerMove = playerInput.toUpperCase();
 
     if (computerMove == playerMove) {
-        roundResults = "Tied.";
+        console.log("Tied");
     } else if (computerMove == "ROCK" && playerMove == "SCISSORS" || 
                computerMove == "PAPER" && playerMove == "ROCK" || 
                computerMove == "SCISSORS" && playerMove == "PAPER") {
-                   roundResults = "Computer wins!";
-                   computerWins++;
+                   console.log("Computer Wins!");
+                   computerWins = ++computerWins;
                } else {
-                   roundResults = "Player wins!"
-                   playerWins++;
+                   console.log("Player Wins!");
+                   playerWins = ++ playerWins;
                }
-    return roundResults;
+
+    console.log(computerWins);
+    console.log(playerWins);
 }
 
-function game(gameWon) {
+function game() {
+
     while (gameWon == 0) {
-        playRound(computerMove, playerWins, computerWins);
+        playRound(playerWins, computerWins);
 
         if (playerWins == 5) {
             console.log("Player won 5 rounds");
