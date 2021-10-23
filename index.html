@@ -13,35 +13,35 @@
 
   <div class = "mainbody1">
     <div class = "mainbody1-gameStatus">
-      <h2>Welcome!</h2>
+      <h2 id = "gameStatus">Welcome!</h2>
     </div>
     
     <div class = "mainbody1-playerPick">
-
+      <p id = "playerPick"></p>
     </div>
 
     <div class = "mainbody1-vs">
       <h3>vs.</h3>
     </div>
 
-    <div class = "mainbody1-computerPick">
-
+    <div class = "mainbody1-computerPick" onclick = "computerPlay()">
+      <p id = "computerPick"></p>
     </div>
 
-    <div class = "mainbody1-playerRock">
+    <div class = "mainbody1-playerRock" onclick = "playRound(Ro)">
       <p>Rock</p>
     </div>
 
-    <div class = "mainbody1-playerPaper">
+    <div class = "mainbody1-playerPaper" onclick = "playRound(Pa)">
       <p>Paper</p>
     </div>
 
-    <div class = "mainbody1-playerScissors">
+    <div class = "mainbody1-playerScissors" onclick = "playRound(Sc)">
       <p>Scissors</p>
     </div>
 
     <div class = "mainbody1-score">
-
+      <h4>Score: 0 - 0</h4>
     </div>
 
   </div>

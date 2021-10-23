@@ -42,6 +42,22 @@ h3 {
   vertical-align: middle;  
 }
 
+h4 {
+  color: black;
+
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;  
+}
+
+p {
+  color: black;
+
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
 .mainbody1 {
   height: calc(100vh - 50px);
   width: 100%;
@@ -69,6 +85,9 @@ h3 {
   width: 30%;
 
   background-color: white;
+
+  display: table;
+  
   margin-top: 3%;
   margin-left: 10%;
 
@@ -79,7 +98,7 @@ h3 {
   width: 5%;
   height: 10%;
 
-  background-color: white;
+  background-color: #3f6191;
 
   align-content: center;
   display: table;
@@ -95,6 +114,8 @@ h3 {
 
   background-color: white;
 
+  display: table;
+
   margin-top: 3%;
   margin-right: 10%;
 
@@ -106,6 +127,8 @@ h3 {
   width: 23%;
 
   background-color: white;
+
+  display: table;
 
   float: left;
   margin-top: 3%;
@@ -120,6 +143,8 @@ h3 {
 
   background-color: white;
 
+  display: table;
+
   float: left;
   margin-top: 3%;
   margin-left: 5.5%;
@@ -132,6 +157,8 @@ h3 {
   width: 23%;
 
   background-color: white;
+
+  display: table;
 
   float: right;
   margin-top: 3%;
@@ -146,10 +173,10 @@ h3 {
 
   background-color: white;
 
+  display: table;
+
   float: left;
 
   margin-left: 20%;
-
   margin-top: 3%;
-
 }
