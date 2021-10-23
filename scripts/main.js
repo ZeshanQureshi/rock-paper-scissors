@@ -1,15 +1,16 @@
-let gameWon = 0;
-
 let computerWins = 0;
 let playerWins = 0;
+
+let paragraphComputer = document.getElementById("computerPick");
+let paragraphPlayer = document.getElementById("playerPick")
+let paragraphGame = document.getElementById("gameStatus");
+let paragraphScore = document.getElementById("gameScore");
 
 let Ro = "Rock";
 let Pa = "Paper";
 let Sc = "Scissors";
 
 function computerPlay() {
-    let paragraphComputer = document.getElementById("computerPick");
-
     let computerChoices = ["Rock", "Paper", "Scissors"];
     let computerDecision = computerChoices[Math.floor(Math.random()*3)];
     
@@ -19,11 +20,7 @@ function computerPlay() {
 }
 
 function playRound(buttonClick) {
-    let paragraphPlayer = document.getElementById("playerPick");
     paragraphPlayer.innerHTML = buttonClick;
-
-    let paragraphGame = document.getElementById("gameStatus");
-    let scoreGame = document.getElementById("gameScore");
 
     let computerRun = computerPlay();
 
@@ -39,16 +36,15 @@ function playRound(buttonClick) {
         paragraphGame.innerHTML = "Scissors beats Paper. You Win!";
         playerWins++;
     } else if (computerRun == "Rock" && buttonClick == "Scissors") {
-        paragraphGame.innerHTML = "Rock beats Scissors. Computer Wins!";
+        paragraphGame.innerHTML = "Scissors loses to Rock. Computer Wins!";
         computerWins++;
     } else if (computerRun == "Paper" && buttonClick == "Rock") {
-        paragraphGame.innerHTML = "Paper beats Rock. Computer Wins!";
+        paragraphGame.innerHTML = "Rock loses to Paper. Computer Wins!";
         computerWins++;
     } else {
-        paragraphGame.innerHTML = "Scissors beats Paper. Computer Wins!";
+        paragraphGame.innerHTML = "Paper loses to Scissors. Computer Wins!";
         computerWins++;
     }
 
-    scoreGame.innerHTML = "Score: " + playerWins + " - " + computerWins + "";
+    paragraphScore.innerHTML = "Score: " + playerWins + " - " + computerWins + "";
 }
-    
